@@ -1,0 +1,145 @@
+@use "../abstract/index" as *;
+
+// === HEADER ===
+.header {
+  height: 100svh;
+  position: relative;
+  display: flex;
+
+  &__bg {
+    flex: 1.5;
+
+    @include rwd(xl) {
+      display: none;
+    }
+  }
+
+  &__imgs {
+    flex: 3;
+    display: flex;
+
+    @include rwd(xl) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    flex: 1;
+    @include flex(flex-end, stretch, column);
+    padding-left: 60px;
+    background-size: cover;
+    height: 100%;
+  }
+
+  &__number {
+    font-family: "Noto Nastaliq Urdu", serif;
+
+    &::before {
+      display: block;
+      content: "";
+      height: 75px;
+      width: 100%;
+      border-left: 1px solid #fff;
+      margin-bottom: 1rem;
+    }
+
+    @include rwd(xl) {
+      display: none;
+    }
+  }
+
+  &__service {
+    @include style(28px, 600, white, capitalize);
+    max-width: 200px;
+    margin: 20px 0 70px;
+
+    @include rwd(xl) {
+      display: none;
+    }
+  }
+
+  &__item--one {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.82)),
+      url(../img/naslovna/toy-house.jpg);
+    background-position: center;
+
+    @include rwd(xl) {
+      background-position: bottom;
+    }
+  }
+
+  &__item--two {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.82)),
+      url(../img/naslovna/woman-standing.jpg);
+    background-position: center;
+  }
+
+  &__item--three {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.82)),
+      url(../img/naslovna/technician.jpg);
+    background-position: right;
+  }
+
+  &__text {
+    @include position(absolute, 50%, auto, auto, 200px, 700px);
+    height: auto;
+    transform: translateY(-50%);
+
+    @include rwd(xl) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 90%;
+    }
+  }
+
+  &__heading {
+    @include style();
+    max-width: 650px;
+
+    @include rwd(xl) {
+      text-align: center;
+      margin: auto;
+    }
+
+    @include rwd(md) {
+      font-size: 28px;
+      width: 350px;
+    }
+
+    @include rwd(mm) {
+      width: 100%;
+    }
+  }
+
+  &__p {
+    @include style(16px, 300, none, none);
+    max-width: 450px;
+    margin: 40px 0 48px;
+
+    @include rwd(xl) {
+      margin: 1rem auto 2rem;
+      text-align: center;
+      max-width: 320px;
+    }
+
+    @include rwd(mm) {
+      width: 100%;
+    }
+  }
+
+  &__btns {
+    @include rwd(xl) {
+      @include flex(flex-start, center, column, 20px);
+    }
+
+    .btn-outline {
+      display: none;
+
+      @include rwd(xl) {
+        display: inline-block;
+      }
+    }
+  }
+}

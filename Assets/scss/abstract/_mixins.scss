@@ -1,0 +1,80 @@
+@use "./varijables" as *;
+
+@mixin position(
+  $position: fixed,
+  $top: 50%,
+  $right: auto,
+  $bottom: auto,
+  $left: 0,
+  $width: auto,
+  $height: auto
+) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  width: $width;
+  height: $height;
+}
+
+@mixin flex($justify: flex-start, $align: center, $flow: row nowrap, $gap: 0) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-flow: $flow;
+  gap: $gap;
+}
+
+$breakpoints: (
+  mm: 400px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+@mixin rwd($size) {
+  @media (max-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+@mixin btn(
+  $color: white,
+  $fontSize: 15px,
+  $fontWeight: 500,
+  $borderColor: white,
+  $padding
+) {
+  color: $color;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  border: 2px solid $primaryColor;
+  border-radius: 40px;
+  padding: $padding;
+  display: inline-block;
+  width: 170px;
+  text-align: center;
+  transition: 0.4s linear;
+  cursor: pointer;
+  text-transform: capitalize;
+
+  &:hover {
+    color: white;
+  }
+}
+
+@mixin style(
+  $align: left,
+  $font-size: 56px,
+  $font-weight: 700,
+  $transform: uppercase,
+  $color: #fff
+) {
+  text-align: $align;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  text-transform: $transform;
+  color: $color;
+}

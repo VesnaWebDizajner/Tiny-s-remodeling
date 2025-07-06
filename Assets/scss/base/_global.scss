@@ -1,0 +1,79 @@
+@use "../abstract/index" as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  list-style-type: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  transition: 0.4s linear;
+}
+
+body {
+  font-size: 16px;
+  overflow-x: hidden;
+  line-height: 1.4;
+  color: #fff;
+  background-color: #151617;
+  font-family: "Inter", sans-serif;
+}
+
+section {
+  padding: 90px 0;
+
+  @include rwd(sm) {
+    section {
+      padding: 70px 0;
+    }
+  }
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+
+  @include rwd(sm) {
+    .container {
+      width: 90%;
+    }
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+a {
+  transition: 0.4s linear;
+  color: #fff;
+}
+a:hover {
+  color: $primaryColor;
+}
+
+.btn {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  display: inline-block;
+  border-radius: 40px;
+  padding: 12px 0;
+  width: 170px;
+  text-align: center;
+  transition: 0.4s linear;
+  cursor: pointer;
+  border: 2px solid $primaryColor;
+  text-transform: capitalize;
+}
+.btn:hover {
+  color: #fff;
+}

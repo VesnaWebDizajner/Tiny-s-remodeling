@@ -1,0 +1,33 @@
+@use "../abstract/index" as *;
+
+.btn {
+  &-primary {
+    background-color: $primaryColor;
+
+    &:hover {
+      background: transparent;
+
+      i {
+        color: $primaryColor;
+      }
+    }
+
+    i {
+      color: white;
+      margin-left: 10px;
+    }
+  }
+
+  i {
+    color: white;
+    margin-left: 10px;
+  }
+
+  &-outline {
+    background: transparent;
+
+    &:hover {
+      background-color: $primaryColor;
+    }
+  }
+}

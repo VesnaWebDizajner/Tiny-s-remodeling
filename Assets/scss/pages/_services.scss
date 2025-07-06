@@ -1,0 +1,748 @@
+@use "../abstract/index" as *;
+
+//Header section
+.header__services {
+  height: 100svh;
+  position: relative;
+  display: flex;
+
+  &__item {
+    padding-left: 100px;
+
+    @include rwd(xl) {
+      @include flex(center, center, column);
+      padding: 0 10%;
+      text-align: center;
+    }
+  }
+
+  &__heading {
+    @include style();
+    max-width: 650px;
+
+    @include rwd(lg) {
+      font-size: 2rem;
+      max-width: 370px;
+      text-align: center;
+    }
+
+    @include rwd(mm) {
+      font-size: 28px;
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__p {
+    @include style(16px, 300, white, none);
+    max-width: 600px;
+    margin: 40px 0 48px;
+
+    @include rwd(lg) {
+      font-size: 1rem;
+      max-width: 350px;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    gap: 1rem;
+
+    @include rwd(lg) {
+      display: flex;
+      gap: 2rem;
+      flex-direction: column;
+    }
+  }
+
+  &__item-bg {
+    @include flex(center, stretch, column);
+    flex: 1.3;
+    background: linear-gradient(
+      270deg,
+      rgba(0, 0, 0, 0.7) 58.49%,
+      rgba(255, 21, 0, 1) 194.03%
+    );
+  }
+
+  &__item-img {
+    flex: 1;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../img/services/services-main.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+
+    @include rwd(xl) {
+      background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.8) 38.75%,
+          rgba(255, 21, 0, 1) 753.46%
+        ),
+        url("../img/services/services-main.jpg");
+      background-size: cover;
+      height: 100%;
+    }
+  }
+
+  #arrow {
+    @include position(absolute, auto, auto, 40px, 50%);
+    transform: translateX(-50%);
+    animation: arrow-down 1.5s infinite;
+    color: $primaryColor;
+    font-size: 2rem;
+    display: none;
+
+    @include rwd(lg) {
+      display: block;
+    }
+  }
+}
+
+//Numbers section
+
+.numbers {
+  @include flex(center, center, wrap);
+  position: relative;
+
+  @include rwd(lg) {
+    row-gap: 4rem;
+  }
+
+  @include rwd(sm) {
+    scroll-margin-top: 80px;
+  }
+
+  &__item {
+    flex-basis: 20%;
+
+    @include rwd(lg) {
+      flex-basis: 45%;
+    }
+  }
+
+  &__number {
+    @include style(center, 44px, 700, none);
+    color: $primaryColor;
+
+    @include rwd(sm) {
+      font-size: 36px;
+    }
+  }
+
+  &__name {
+    @include style(center, 14px, 600, uppercase, white);
+
+    @include rwd(sm) {
+      width: 100px;
+      margin: auto;
+    }
+  }
+
+  &__building {
+    @include position(absolute, auto, auto, 0, -150px, 400px);
+
+    @include rwd(lg) {
+      display: none;
+    }
+  }
+}
+
+//Services section
+
+.services {
+  width: 70%;
+  margin: auto;
+
+  @include rwd(md) {
+    width: 90%;
+  }
+
+  &__header {
+    @include style(center, 25px, capitalize);
+    display: none;
+
+    @include rwd(xl) {
+      display: block;
+    }
+
+    &-p {
+      font-weight: 300;
+      max-width: 300px;
+      margin: 2rem auto;
+      text-transform: none;
+    }
+
+    &-tel {
+      @include style(none, 16px, 300, capitalize, $primaryColor);
+    }
+  }
+
+  &__wrapper {
+    @include flex(flex-start, stretch, wrap);
+    margin-top: 48px;
+  }
+
+  &__item {
+    flex-basis: 33%;
+    padding: 32px;
+
+    @include rwd(xl) {
+      flex-basis: 50%;
+    }
+
+    @include rwd(sm) {
+      padding: 2rem 1rem;
+    }
+
+    &:nth-child(1) {
+      @include rwd(xl) {
+        display: none;
+      }
+    }
+
+    &:nth-child(2) {
+      @include rwd(xl) {
+        order: -1;
+      }
+    }
+
+    &:nth-child(3) {
+      @include rwd(xl) {
+        order: 0;
+      }
+    }
+
+    &:nth-child(4) {
+      @include rwd(xl) {
+        order: 2;
+      }
+    }
+
+    &:nth-child(5) {
+      @include rwd(xl) {
+        order: 1;
+      }
+    }
+
+    &:nth-child(6) {
+      @include rwd(xl) {
+        order: 3;
+      }
+    }
+  }
+
+  &__heading {
+    @include style(45px, 600, white, uppercase);
+    margin-bottom: 60px;
+  }
+
+  &__text {
+    @include style(15px, 300, capitalize, white);
+    margin-bottom: 1rem;
+    max-width: 350px;
+  }
+
+  &__tel {
+    @include style(left, 1rem, 300, capitalize, $primaryColor);
+  }
+
+  &__img {
+    @include flex(center, center);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    line-height: 60px;
+    text-align: center;
+    box-shadow: 0px 0px 21.2px 2px rgba(0, 0, 0, 0.25);
+    background: rgba(39, 39, 39, 1);
+  }
+
+  svg {
+    fill: $primaryColor;
+  }
+
+  &__name {
+    @include style(left, 1.5rem, 500, none, white);
+    margin: 100px 0 40px;
+
+    @include rwd(xl) {
+      font-size: 14px;
+      margin: 32px 0 16px;
+    }
+  }
+
+  &__desc {
+    @include style(left, 14px, 300, none, rgba(220, 220, 220, 1));
+    @include rwd(xl) {
+      font-size: 12px;
+    }
+  }
+
+  &__item--bg {
+    background-color: rgba(39, 39, 39, 1);
+
+    .services__img {
+      box-shadow: 0px 0px 21.2px 2px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+//Projects section
+
+.projects__services {
+  position: relative;
+
+  .section__header {
+    text-align: center;
+
+    .section__title {
+      @include style(none, 14px, 600, uppercase, $primaryColor);
+      margin-bottom: 16px;
+    }
+
+    .section__subtitle {
+      @include style(none, 32px, 700, capitalize, white);
+      @include rwd(md) {
+        width: 350px;
+        margin: 16px auto 0;
+      }
+
+      @include rwd(sm) {
+        width: 100%;
+      }
+    }
+
+    .projects__desc {
+      @include style(none, 15px, 300, none, white);
+      max-width: 900px;
+      margin: 1.5rem auto 0;
+      line-height: 1.8;
+
+      @include rwd(sm) {
+        width: 300px;
+      }
+      @include rwd(mm) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__wrapper {
+    @include flex(space-between, flex-start, wrap);
+    margin: 3rem 0;
+    row-gap: 2rem;
+  }
+
+  &__item {
+    flex-basis: 30%;
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+
+    @include rwd(xl) {
+      flex-basis: 47%;
+    }
+
+    @include rwd(md) {
+      flex-basis: 100%;
+      height: 300px;
+    }
+
+    &--hidden {
+      @include rwd(md) {
+        display: none;
+      }
+    }
+
+    &:hover > .projects__services__overlay {
+      opacity: 1;
+      transition: 0.4s linear;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+
+    &.active {
+      .projects__services__overlay {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__overlay {
+    @include position(absolute, 0, 0, 0, 0);
+    @include flex(center, center, column);
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+  }
+
+  &__name {
+    @include style(left, 24px, 700, capitalize, #fff);
+  }
+
+  &__location {
+    @include style(left, 12px, 600, uppercase, #fff);
+  }
+
+  &__btn {
+    text-align: center;
+  }
+
+  &__drill {
+    @include position(absolute, 50px, auto, auto, -100px, 300px);
+    @include rwd(xl) {
+      display: none;
+    }
+  }
+
+  &__hammer {
+    @include position(absolute, auto, -120px, -100px, auto, 250px);
+
+    @include rwd(xl) {
+      display: none;
+    }
+  }
+}
+
+//Form section
+
+.form {
+  @include flex(flex-start, center, nowrap, 2rem);
+  box-shadow: 0px 0px 45.3px -3px rgba(255, 255, 255, 0.09);
+  padding: 70px 50px;
+  border-radius: 2rem;
+  margin: 5rem auto;
+  background: linear-gradient(
+    252.95deg,
+    #151617 58.44%,
+    #ff1500 138.17%,
+    #ffffff 157.45%
+  );
+
+  @include rwd(xl) {
+    padding: 70px 1rem;
+    flex-direction: column;
+    align-items: stretch;
+    background: linear-gradient(
+      320.68deg,
+      #151617 54.97%,
+      #ff1500 144.13%,
+      #ffffff 165.69%
+    );
+  }
+
+  &__item {
+    flex: 1;
+    @include rwd(xl) {
+      text-align: center;
+    }
+  }
+
+  &__heading {
+    @include style(left, 40px, 600, none, white);
+    margin-bottom: 1.5rem;
+
+    @include rwd(xl) {
+      text-align: center;
+    }
+    @include rwd(sm) {
+      font-size: 30px;
+    }
+  }
+
+  &__desc {
+    color: rgba(230, 230, 230, 1);
+    width: 400px;
+    margin-bottom: 40px;
+    font-weight: 300;
+
+    @include rwd(xl) {
+      margin: 0 auto 30px;
+    }
+
+    @include rwd(sm) {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__link {
+    display: block;
+    font-weight: 500;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    span {
+      margin-right: 10px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+      color: white;
+    }
+  }
+
+  &__item--form {
+    @include rwd(xl) {
+      padding: 0 20px;
+    }
+    @include rwd(sm) {
+      margin-top: 30px;
+    }
+  }
+
+  &__box {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__label {
+    @include style(none, 15px, 500, capitalize, white);
+    display: block;
+    margin-bottom: 10px;
+
+    @include rwd(xl) {
+      text-align: center;
+    }
+  }
+
+  &__input {
+    background: rgba(247, 248, 255, 1);
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-size: 15px;
+
+    &::placeholder {
+      text-transform: capitalize;
+      font-size: 15px;
+
+      @include rwd(sm) {
+        font-weight: 300;
+      }
+    }
+  }
+
+  &__textarea {
+    width: 100%;
+    height: 90px;
+    font-family: Inter, sans-serif;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 15px;
+    resize: none;
+
+    &::placeholder {
+      text-transform: capitalize;
+      font-family: Inter, sans-serif;
+      font-size: 15px;
+      @include rwd(576) {
+        font-weight: 400;
+      }
+    }
+  }
+
+  &__btn {
+    font-family: Inter, sans-serif;
+    text-transform: uppercase;
+  }
+
+  &__msg {
+    margin-top: 0.5rem;
+    color: white;
+  }
+}
+
+//Question section
+
+.question {
+  &__heading {
+    @include style(center, 2rem, 600, white, none);
+    @include rwd(lg) {
+      font-size: 1.5rem;
+      max-width: 250px;
+      margin: auto;
+    }
+  }
+
+  &__wrapper {
+    @include flex(space-between, stretch, wrap, 1rem);
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: black;
+    border-radius: 1rem;
+
+    @include rwd(md) {
+      padding: 1rem;
+    }
+  }
+
+  &__item {
+    flex-basis: 47%;
+    padding: 25px;
+    border-radius: 10px;
+
+    @include rwd(xl) {
+      flex-basis: 100%;
+    }
+
+    &.active {
+      background-color: white;
+      color: black;
+    }
+  }
+
+  &__header {
+    @include flex(space-between, center);
+    @include rwd(sm) {
+      font-size: 14px;
+    }
+
+    i {
+      font-size: 15px;
+      transition: 0.4s linear;
+
+      &.active {
+        transform: rotate(90deg);
+        color: black;
+      }
+    }
+  }
+
+  &__body {
+    max-height: 0;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 300;
+    transition: 0.4s linear;
+
+    &.active {
+      border-top: 1px solid rgba(241, 241, 241, 1);
+      max-height: 200px;
+      padding-top: 20px;
+    }
+  }
+}
+
+//Blog posts section
+
+.blog__posts {
+  scroll-margin-top: 5rem;
+
+  .section__header {
+    .section__subtitle {
+      @include style(center, 32px, 600, none, white);
+
+      @include rwd(sm) {
+        max-width: 100%;
+        font-size: 25px;
+      }
+    }
+    .section__title {
+      @include style(center, 18px, 600, uppercase, $primaryColor);
+    }
+  }
+
+  &__wrapper {
+    @include flex(center, stretch, wrap, 2rem);
+    margin-top: 45px;
+    row-gap: 150px;
+
+    @include rwd(sm) {
+      row-gap: 100px;
+    }
+  }
+
+  &__item {
+    flex-basis: 30%;
+
+    @include rwd(xl) {
+      flex-basis: 45%;
+    }
+
+    @include rwd(md) {
+      flex-basis: 100%;
+    }
+
+    &.hidden {
+      @include rwd(md) {
+        display: none;
+      }
+    }
+
+    .all__blogs {
+      display: none;
+      margin: 1rem auto 0;
+
+      @include rwd(md) {
+        display: block;
+        background: transparent;
+        border: 2px solid $primaryColor;
+        border-radius: 40px;
+        padding: 12px 0;
+        width: 170px;
+        @include style(center, 15px, 500, capitalize, white);
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+    height: 250px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__heading {
+    font-weight: 500;
+    font-size: 22px;
+    margin-top: 1rem;
+    display: block;
+
+    @include rwd(md) {
+      font-size: 15px;
+    }
+  }
+
+  &__date {
+    margin: 1.5rem 0 16px;
+
+    i {
+      font-size: 14px;
+    }
+
+    span {
+      font-weight: 300;
+      font-size: 10px;
+      color: rgba(141, 141, 141, 1);
+    }
+  }
+
+  &__p {
+    color: rgba(197, 197, 197, 1);
+    text-align: justify;
+    line-height: 18px;
+    font-size: 11px;
+    margin-bottom: 1rem;
+  }
+
+  &__link {
+    @include style(left, 12px, 700, uppercase, white);
+    text-decoration: underline;
+    text-decoration-color: $primaryColor;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

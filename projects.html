@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tinys remodeling - Projects</title>
+
+    <!--Favicon-->
+
+    <link rel="icon" type="image/png" href="Assets/img/naslovna/favicon.png" />
+
+    <!--Description-->
+
+    <meta
+      name="description"
+      content="Explore our project gallery showcasing impressive before-and-after transformations. From renovations to repairs and installations, see how Tinys Remodeling brings your vision to life with expert craftsmanship and attention to detail. Browse our completed projects for inspiration!"
+    />
+
+    <!--Google fonts-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bentham&family=Comic+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Font Awesome CDN-->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--Custom CSS-->
+
+    <link rel="stylesheet" href="Assets/css/main.css" />
+  </head>
+  <body>
+    <!--Nav section starts-->
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">
+        <img
+          src="Assets/img/naslovna/desktop-logo.png"
+          alt="tinys remodeling desktop logo"
+          class="nav__logo-desktop"
+        />
+        <img
+          src="Assets/img/naslovna/mogile-logo.png"
+          alt="tinys remodeling mobile logo"
+          class="nav__logo-mobile"
+        />
+      </a>
+
+      <ul class="nav__list">
+        <li><a href="projects.html" class="nav__link active">projects</a></li>
+        <li><a href="services.html" class="nav__link">services</a></li>
+        <li><a href="about.html" class="nav__link">about</a></li>
+        <li><a href="blog.html" class="nav__link">read</a></li>
+        <li>
+          <a
+            href="contact.html"
+            class="nav__link nav__link--btn btn btn-primary"
+            >contact us</a
+          >
+        </li>
+      </ul>
+
+      <div class="nav__hamburger" id="hamburger">
+        <div class="hamburger__line"></div>
+        <div class="hamburger__line hamburger__line--mid"></div>
+        <div class="hamburger__line"></div>
+      </div>
+    </nav>
+    <!--Nav section ends-->
+
+    <!--Mobile menu section starts-->
+    <section class="mobile" id="mobile-menu">
+      <i class="fa-regular fa-circle-xmark" id="close"></i>
+
+      <ul class="mobile__list">
+        <li>
+          <a href="projects.html" class="mobile__link">PROJECTS</a>
+        </li>
+        <li>
+          <a href="services.html" class="mobile__link">SERVICES</a>
+        </li>
+        <li>
+          <a href="about.html" class="mobile__link">ABOUT US</a>
+        </li>
+        <li>
+          <a href="blog.html" class="mobile__link">READ</a>
+        </li>
+      </ul>
+
+      <p class="mobile__text">
+        Transforming spaces, building dreams - <span>together</span> !
+      </p>
+      <div class="mobile__icons">
+        <a
+          href="mailto:remodelingtiny@gmail.com"
+          aria-label="Click to send email"
+        >
+          <i class="fa-regular fa-envelope"></i
+        ></a>
+        <a href="tel:+1 321 265 9840" aria-label="Click to call phone number">
+          <i class="fa-solid fa-phone"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/tinys_remodeling/"
+          target="_blank"
+          aria-label="Click to see Instagram profile"
+        >
+          <i class="fa-brands fa-instagram"></i
+        ></a>
+      </div>
+
+      <a href="contact.html" class="btn btn-primary">contact us</a>
+    </section>
+    <!--Mobile menu section ends-->
+
+    <!--Header section starts-->
+    <header class="header-project">
+      <div class="header-project__wrapper container">
+        <h1 class="header-project__heading">
+          We RE-BUILD <br />
+          YOUR dream HOME
+        </h1>
+        <p class="header-project__p">
+          Turning your vision into reality. From modern kitchens to complete
+          home renovations, we rebuild your dream house with creativity and
+          care. Let’s make it real, together.
+        </p>
+        <a href="#projects" class="btn btn-primary">our projects</a>
+      </div>
+
+      <div class="header-project__triangle-one"></div>
+      <div class="header-project__triangle-two"></div>
+      <div class="header-project__triangle-three"></div>
+
+      <a href="#projects" id="arrow">
+        <i class="fas fa-angle-double-down"></i>
+      </a>
+    </header>
+    <!--Header section ends-->
+
+    <!--Projects section starts-->
+    <section class="projects container" id="projects">
+      <div class="projects__header">
+        <h3 class="projects__heading">Explore Our Transformations</h3>
+        <p class="projects__p">
+          From kitchen overhauls to bathroom makeovers, each project showcases
+          our expertise in design and quality work. <br />
+          Get inspired by the before-and-after images and envision your own
+          dream space becoming a reality.
+        </p>
+      </div>
+      <div class="projects__wrapper">
+        <article class="projects__item">
+          <p class="projects__name">floor <span>&amp;</span> walls</p>
+          <div class="projects__imgs">
+            <div class="projects__img">
+              <img
+                src="Assets/img/projects/Wood Floor After2.jpg"
+                alt="image of stairs before reperation"
+              />
+            </div>
+            <button class="projects__btn projects__btn--left">❮</button>
+            <button class="projects__btn projects__btn--right">❯</button>
+          </div>
+          <div class="projects__labels">
+            <span class="projects__label">Wall repair </span>
+            <span class="projects__label">moisture control </span>
+            <span class="projects__label">painting</span>
+            <span class="projects__label">drywall installation </span>
+            <span class="projects__label">surface preparation</span>
+            <span class="projects__label">finishing touches</span>
+          </div>
+        </article>
+
+        <article class="projects__item">
+          <p class="projects__name">floor</p>
+          <div class="projects__imgs">
+            <div class="projects__img">
+              <img
+                src="Assets/img/projects/Wood Floor Before1.jpg"
+                alt="image of wood before floor repration"
+              />
+            </div>
+          </div>
+          <div class="projects__labels">
+            <span class="projects__label">floor removed </span>
+            <span class="projects__label">subfloor prepped </span>
+            <span class="projects__label">walls painted</span>
+            <span class="projects__label">flooring </span>
+            <span class="projects__label">finishing touches</span>
+          </div>
+        </article>
+
+        <article class="projects__item">
+          <p class="projects__name">stairs</p>
+          <div class="projects__imgs">
+            <div class="projects__img">
+              <img
+                src="Assets/img/projects/stairs2.jpg"
+                alt="image of floor and walls before reparation"
+              />
+            </div>
+            <button class="projects__btn projects__btn--left">❮</button>
+            <button class="projects__btn projects__btn--right">❯</button>
+          </div>
+          <div class="projects__labels">
+            <span class="projects__label">stairs stripped </span>
+            <span class="projects__label">prepping stairs</span>
+            <span class="projects__label">walls painted</span>
+            <span class="projects__label">tile installed</span>
+            <span class="projects__label">finishing touches</span>
+          </div>
+        </article>
+
+        <article class="projects__item hidden">
+          <p class="projects__name">floor</p>
+          <div class="projects__imgs">
+            <div class="projects__img">
+              <img
+                src="Assets/img/projects/Floor & Walls After2.jpg"
+                alt="image of wall window  before reparation"
+              />
+            </div>
+            <button class="projects__btn projects__btn--left">❮</button>
+            <button class="projects__btn projects__btn--right">❯</button>
+          </div>
+          <div class="projects__labels">
+            <span class="projects__label">tile installation</span>
+            <span class="projects__label">precision leveling</span>
+            <span class="projects__label">grouting</span>
+            <span class="projects__label">surface preparation</span>
+            <span class="projects__label">polished finish </span>
+          </div>
+        </article>
+
+        <article class="projects__item hidden">
+          <p class="projects__name">floor</p>
+          <div class="projects__imgs">
+            <div class="projects__img">
+              <img
+                src="Assets/img/projects/Wood Floor After2.jpg"
+                alt="image of corner pantry before reparation "
+              />
+            </div>
+          </div>
+          <div class="projects__labels">
+            <span class="projects__label">floor removed </span>
+            <span class="projects__label">subfloor prepped </span>
+            <span class="projects__label">walls painted</span>
+            <span class="projects__label">flooring </span>
+            <span class="projects__label">finishing touches</span>
+          </div>
+        </article>
+
+        <article class="projects__item hidden">
+          <p class="projects__name">stairs</p>
+          <div class="projects__imgs">
+            <div class="projects__img">
+              <img
+                src="Assets/img/projects/stairs2.jpg"
+                alt="image of kitchen after reparation"
+              />
+            </div>
+            <button class="projects__btn projects__btn--left">❮</button>
+            <button class="projects__btn projects__btn--right">❯</button>
+          </div>
+          <div class="projects__labels">
+            <span class="projects__label">stairs stripped</span>
+            <span class="projects__label">prepping stairs</span>
+            <span class="projects__label">walls painted</span>
+            <span class="projects__label">tile installed</span>
+            <span class="projects__label">finishing touches</span>
+          </div>
+        </article>
+        <button class="projects__cta btn btn-outline" id="projects-btn">
+          load more
+        </button>
+      </div>
+    </section>
+    <!--Projects section ends-->
+
+    <!--Vision section starts-->
+    <section class="vision container">
+      <h3 class="vision__heading">
+        Have a Vision? <span>Let’s Bring It to Life!</span>
+      </h3>
+      <p class="vision__p">
+        Got questions or ready to discuss your ideas? Contact us today to get
+        started!
+      </p>
+      <img
+        src="./Assets/img/projects/projects logo.png"
+        class="vision__img"
+        alt=""
+      />
+      <a href="contact.html" class="btn btn-primary">contact us</a>
+      <img
+        src="./Assets/img/projects/paint-brush.png"
+        class="vision__brush"
+        alt=""
+        aria-hidden="true"
+      />
+    </section>
+    <!--Vision section ends-->
+
+    <!--Question section starts-->
+    <section class="question container">
+      <h3 class="question__heading">Maybe you can find your answer here</h3>
+
+      <div class="question__wrapper">
+        <article class="question__item" data-key="question-item">
+          <div class="question__header">
+            <p class="question__question">
+              What types remodeling services do you offer?
+            </p>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+        </article>
+
+        <article class="question__item" data-key="question-item">
+          <div class="question__header">
+            <p class="question__question">
+              Are you licensed and insured to work in my state?
+            </p>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+        </article>
+
+        <article class="question__item" data-key="question-item">
+          <div class="question__header">
+            <p class="question__question">How much will my remodel cost?</p>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+        </article>
+
+        <article class="question__item" data-key="question-item">
+          <div class="question__header">
+            <p class="question__question">
+              Can you help with permits and approvals for my remodeling project?
+            </p>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+        </article>
+
+        <article class="question__item" data-key="question-item">
+          <div class="question__header">
+            <p class="question__question">
+              What sholud I expect during the initial consultation?
+            </p>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+        </article>
+
+        <article class="question__item" data-key="question-item">
+          <div class="question__header">
+            <p class="question__question">
+              Do you offer a warranty on your work?
+            </p>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!--Question section ends-->
+
+    <!--Footer section starts-->
+    <footer class="footer">
+      <div class="footer__wrapper container">
+        <article class="footer__item">
+          <a href="index.html" class="footer__logo">
+            <img
+              src="./Assets/img/naslovna/desktop-logo.png"
+              alt="tinys remodeling logo for desktop"
+              class="footer__logo-desktop"
+            />
+            <img
+              src="./Assets/img/naslovna/mogile-logo.png"
+              alt="tinys remodeling for mobile"
+              class="footer__logo-mobile"
+            />
+          </a>
+
+          <div class="footer__p">
+            Creating your ideal space through a balanced and collaborative
+            approach to remodeling.
+          </div>
+
+          <div class="footer__menu">
+            <a href="projects.html" style="color: #ff1500">projects</a>
+            <a href="services.html">services</a>
+            <a href="about.html">about</a>
+            <a href="contact.html" id="contactLink">contact</a>
+          </div>
+        </article>
+
+        <article class="footer__item footer__item--right">
+          <h3 class="footer__heading">
+            Transforming spaces, building dreams - <span>together</span> !
+          </h3>
+          <a href="contact.html" class="footer__btn btn btn-primary"
+            >contact us</a
+          >
+        </article>
+
+        <div class="footer__social">
+          <a href="mailto:remodelingtiny@gmail.com">
+            <i class="fa-regular fa-envelope"></i
+          ></a>
+
+          <a href="tel:+1 321 265 9840">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+
+          <a href="https://www.instagram.com/tinys_remodeling/" target="_blank">
+            <i class="fa-brands fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="footer__copy container">
+        <p class="footer__copyright">
+          © Copyright 2015 - <span id="year">2025</span> Tiny’s Remodeling LLC.
+          All rights reserved.
+        </p>
+        <p class="footer__copyright">
+          Designed by
+          <a href="https://dinadoesit.com/" style="text-decoration: underline"
+            >DinaDoesIt</a
+          >
+        </p>
+      </div>
+    </footer>
+    <!--Footer section ends-->
+
+    <!--Social icon section starts-->
+    <div class="social__icons">
+      <a
+        href="https://www.instagram.com/tinys_remodeling/"
+        target="_blank"
+        aria-label="Click to view instagram profile"
+      >
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <a
+        href="https://www.facebook.com/profile.php?id=61567153992759"
+        target="_blank"
+        aria-label="Click to view Facebook profile"
+      >
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+
+      <a href="tel:+1 321 265 9840" aria-label="Click to call phone number">
+        <i class="fa-solid fa-phone"></i>
+      </a>
+    </div>
+    <!--Social icon section ends-->
+
+    <!--Custom JS-->
+    <script src="Assets/js/main.js"></script>
+  </body>
+</html>

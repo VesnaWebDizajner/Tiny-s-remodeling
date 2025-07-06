@@ -1,0 +1,17 @@
+@use "./abstract/index" as *;
+
+@use "base/global";
+
+@use "components/buttons";
+@use "components/social-icons";
+
+@use "layout/footer";
+@use "layout/mobile-menu";
+@use "layout/nav";
+
+@use "pages/mainpage";
+@use "pages/projects";
+@use "pages/services";
+@use "pages/about";
+@use "pages/blog";
+@use "pages/contact";
