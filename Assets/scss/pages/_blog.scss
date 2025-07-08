@@ -2,7 +2,7 @@
 
 //Header section
 
-.header__blog {
+.header__read {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("../img/read/cardboard-house.jpg");
   height: 100svh;
@@ -25,7 +25,7 @@
   }
 
   &__heading {
-    @include style(none, 56px, 700, uppercase, white);
+    @include style(center, 56px, 700, uppercase, white);
     width: 700px;
     text-align: center;
 

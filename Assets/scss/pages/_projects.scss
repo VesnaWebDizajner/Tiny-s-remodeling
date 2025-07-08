@@ -50,6 +50,8 @@
   &__triangle-three {
     position: absolute;
     bottom: 0;
+    top: auto;
+    right: auto;
     clip-path: polygon(49% 0, 0% 100%, 100% 100%);
 
     @include rwd(lg) {
@@ -59,21 +61,23 @@
 
   &__triangle-one {
     left: -220px;
-    width: 500px;
-    height: 380px;
+    width: 490.37px;
+    height: 382.05px;
+    transform: rotate(6.99 deg);
     background: rgba(255, 255, 255, 0.16);
   }
 
   &__triangle-two {
     left: 100px;
-    width: 500px;
+    width: 487.58px;
     height: 600px;
+    transform: rotate(6.99 deg);
     background: rgba(0, 0, 0, 0.16);
   }
 
   &__triangle-three {
-    left: 300px;
-    width: 550px;
+    left: 288.73px;
+    width: 563.43px;
     height: 450px;
     clip-path: polygon(74% 3%, 0% 100%, 100% 100%);
     background: rgba(255, 21, 0, 0.16);
@@ -180,45 +184,65 @@
   &__imgs {
     position: relative;
     overflow: hidden;
-  }
 
-  &__img {
-    transition: 0.4s linear;
-    display: flex;
+    .projects__img {
+      position: relative;
 
-    img {
-      width: 100%;
-      flex-shrink: 0;
-    }
-  }
+      img {
+        width: 100%;
+        flex-shrink: 0;
+        display: block;
+      }
 
-  &__btn {
-    @include position(absolute, auto);
-    transform: translateY(-50%);
-    border-radius: 50%;
-    line-height: 30px;
-    width: 30px;
-    height: 30px;
-    border: 2px solid #fff;
-    font-size: 13px;
-    text-align: center;
-    cursor: pointer;
-    transition: 0.4s linear;
-    background-color: transparent;
+      .projects__dots {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+        z-index: 3;
+        border-radius: 50%;
 
-    &:hover {
-      color: $primaryColor;
-      border-color: $primaryColor;
-    }
+        i {
+          font-size: 10px;
+          opacity: 0.7;
+          color: rgb(202, 200, 200);
 
-    &--left {
-      left: 10px;
-      color: #fff;
+          &.active {
+            color: $primaryColor;
+          }
+        }
+      }
     }
 
-    &--right {
-      right: 10px;
-      color: #fff;
+    .projects__btn {
+      @include position(absolute, 50%, auto, auto, auto);
+      transform: translateY(-50%);
+      z-index: 3;
+      border-radius: 50%;
+      line-height: 30px;
+      width: 30px;
+      height: 30px;
+      border: 2px solid #fff;
+      font-size: 13px;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.4s linear;
+      background-color: transparent;
+
+      &:hover {
+        color: $primaryColor;
+        border-color: $primaryColor;
+      }
+
+      &.projects__btn--left {
+        left: 10px;
+      }
+
+      &.projects__btn--right {
+        right: 10px;
+      }
     }
   }
 
@@ -299,7 +323,7 @@
   }
 
   &__img {
-    opacity: 0.2;
+    opacity: 6%;
     width: 390px;
     margin: 20px 0;
 

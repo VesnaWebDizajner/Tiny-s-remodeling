@@ -1,0 +1,29 @@
+@use "../abstract/index" as *;
+
+//Header section
+
+.header__blog {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+
+  &.header__blog-bathroom {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../img/blog/modern-bathroom.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__heading-bathroom {
+    position: absolute;
+    bottom: 40px;
+    right: 37.5%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    text-transform: uppercase;
+
+    span {
+      color: $primaryColor;
+    }
+  }
+}
