@@ -50,8 +50,10 @@ window.addEventListener("resize", updateTitleText);
 
 // Menjanje broja na stranici about.html, sekciji experience kada se ekran smanji
 
-function updateYearsNumber() {
+function updateYearsNumbers() {
   const yearsNumber = document.querySelector(".years__number");
+  if (!yearsNumber) return;
+
   if (window.innerWidth <= 768) {
     yearsNumber.textContent = "10";
   } else {
@@ -60,10 +62,10 @@ function updateYearsNumber() {
 }
 
 // Poziv prilikom učitavanja
-updateYearsNumber();
+updateYearsNumbers();
 
 // Poziv prilikom promene veličine ekrana
-window.addEventListener("resize", updateYearsNumber);
+window.addEventListener("resize", updateYearsNumbers);
 
 //Promena linka u footer-u smanjenjem ekrana na mobilnu verziju, umesto contact pojavljuje se read sa linkom blog.html
 

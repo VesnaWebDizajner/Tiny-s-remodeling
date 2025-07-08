@@ -1,0 +1,124 @@
+@use "../abstract/index" as *;
+
+//Kitchen blog
+
+.header__blog {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+
+  &-kitchen {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../img/blog/modern-kitchen.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__heading {
+    text-transform: uppercase;
+    font-size: 46px;
+    margin: 0 10%;
+    letter-spacing: 1%;
+    line-height: 120%;
+
+    span {
+      color: $primaryColor;
+    }
+  }
+}
+
+//Blog section
+
+.blog__section {
+  &__text {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  &__heading {
+    margin: 2rem 0;
+    font-size: 2rem;
+    text-transform: capitalize;
+
+    @include rwd(sm) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__list {
+    padding-left: 3rem;
+    list-style-type: disc;
+
+    @include rwd(sm) {
+      padding-left: 2rem;
+    }
+
+    &__item {
+      margin-bottom: 1rem;
+      font-style: italic;
+
+      i {
+        font-size: 5px;
+        vertical-align: middle;
+        margin-right: 2px;
+      }
+
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__contact {
+    @include flex(space-between, flex-end);
+
+    @include rwd(sm) {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 2rem;
+    }
+  }
+
+  &__p {
+    color: $primaryColor;
+
+    font-weight: 700;
+    font-size: 20px;
+
+    @include rwd(sm) {
+      font-size: 1rem;
+    }
+  }
+
+  &__icons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+
+    a {
+      font-size: 1.3rem;
+    }
+  }
+
+  &__allBlogs {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    a {
+      font-size: 14px;
+
+      &:hover {
+        color: $primaryColor;
+      }
+    }
+
+    span {
+      color: $primaryColor;
+    }
+  }
+}
