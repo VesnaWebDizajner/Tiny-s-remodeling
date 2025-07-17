@@ -19,7 +19,7 @@
     height: 100%;
 
     @include rwd(lg) {
-      row-gap: 70px;
+      row-gap: 45px;
       align-items: center;
       text-align: center;
     }
@@ -30,8 +30,13 @@
     text-align: left;
 
     @include rwd(md) {
-      font-size: 37px;
+      font-size: 28px;
       text-align: center;
+      width: 400px;
+    }
+
+    @include rwd(mm) {
+      max-width: 100%;
     }
   }
 
@@ -40,8 +45,13 @@
     margin: 40px 0 48px;
     max-width: 650px;
 
-    @include rwd(xl) {
+    @include rwd(lg) {
       width: 350px;
+      text-align: center;
+    }
+
+    @include rwd(sm) {
+      max-width: 100%;
     }
   }
 

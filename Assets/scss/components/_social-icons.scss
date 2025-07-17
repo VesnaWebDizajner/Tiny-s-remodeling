@@ -3,6 +3,7 @@
 .social__icons {
   @include position(fixed, 50%, auto, auto, 0);
   @include flex(center, stretch, column, 1.5rem);
+  transform: translateY(-50%);
 
   background-color: black;
   padding: 2rem 1rem;

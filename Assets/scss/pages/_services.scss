@@ -2,8 +2,8 @@
 
 //Header section
 .header__services {
-  height: 100svh;
   position: relative;
+  height: 100svh;
   display: flex;
 
   &__item {
@@ -49,7 +49,7 @@
     gap: 1rem;
 
     @include rwd(lg) {
-      display: flex;
+      display: flex !important;
       gap: 2rem;
       flex-direction: column;
     }
@@ -88,7 +88,6 @@
   #arrow {
     @include position(absolute, auto, auto, 40px, 50%);
     transform: translateX(-50%);
-    animation: arrow-down 1.5s infinite;
     color: $primaryColor;
     font-size: 2rem;
     display: none;
